@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-crud-firebase-1ffc9": {
+      "hosting": {
+        "firebase-angular": [
+          "angular-crud-firebase-1ffc9"
+        ]
+      }
+    }
+  }
+}

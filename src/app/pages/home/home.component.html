@@ -1,0 +1,60 @@
+<div
+  class="form"
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 91vh;
+  "
+>
+  <div
+    [formGroup]="contactForm"
+    style="display: flex; flex-direction: column; width: 300px"
+  >
+    <img
+      *ngIf="kittyImagePreview"
+      class="preview-image"
+      [src]="kittyImagePreview"
+      alt="Cute Kitty Picture"
+    />
+    <mat-form-field class="example-form-field">
+      <mat-label>Nombres</mat-label>
+      <input matInput type="text" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field class="example-form-field">
+      <mat-label>Apellidos</mat-label>
+      <input matInput type="text" formControlName="lastName" />
+    </mat-form-field>
+    <mat-form-field class="example-form-field">
+      <mat-label>Correo electronico</mat-label>
+      <input matInput type="text" formControlName="email" />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Foto</mat-label>
+      <ngx-mat-file-input
+        accept="image/*"
+        formControlName="foto"
+        placeholder="Basic outline placeholder"
+      >
+      </ngx-mat-file-input>
+      <mat-icon matSuffix>folder</mat-icon>
+    </mat-form-field>
+    <br />
+    <!--Sin libreria-->
+    <!-- <label>subir archivo</label>
+    <label class="image-upload-container btn btn-bwm">
+      <span>Select Image</span>
+      <input
+        #imageInput
+        type="file"
+        accept="image/*"
+        (change)="processFile($event)"
+      />
+    </label> -->
+
+    <button mat-raised-button color="primary" (click)="addContact()">
+      Agregar empleado
+    </button>
+  </div>
+</div>
