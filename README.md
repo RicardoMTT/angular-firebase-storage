@@ -10,6 +10,11 @@ This project was made with firebase firestore and Storage.
     </a>
 </p>
 
+<p>
+  This view is a form with 4 fields.
+  There is another view where all the registered people are seen in real time.Rxjs was also used.
+  Also use the ngx-material-file-input package, because angular material doesn't support input: file
+</p>
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
